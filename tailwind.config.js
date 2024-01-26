@@ -4,13 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        purple: "#986dff",
+        "purple-500": "#986dff",
+        "purple-600": "#8257e6",
         black: "#13131F",
         gray: "#9ca3af",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        dm: ["DM Sans", "serif"],
+        dm: ["DM Sans Variable", "serif"],
       },
     },
   },
