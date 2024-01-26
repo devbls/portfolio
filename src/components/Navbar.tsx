@@ -8,9 +8,11 @@ export const Navbar = () => {
     <header className="flex justify-between items-center h-20 p-8">
       <img className="h-12 w-12" src="/logo.png" alt="Logo" />
       <nav className="flex gap-12">
-        <span className="font-poppins text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
-          {t("about")}
-        </span>
+        <a href="#about">
+          <span className="font-poppins text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
+            {t("about")}
+          </span>
+        </a>
         <span className="font-poppins text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
           {t("projects")}
         </span>
