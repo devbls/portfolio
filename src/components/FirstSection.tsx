@@ -18,7 +18,7 @@ export const FirstSection = () => {
             </button>
           </a>
         </div>
-        <img className="h-32 w-32" src="/logo.png" alt="Logo" />
+        <img className="h-128 w-128" src="/logo.webp" alt="Logo" />
       </div>
     </div>
   );
