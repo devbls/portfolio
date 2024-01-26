@@ -12,11 +12,11 @@ export const FirstSection = () => {
           <p className="font-poppins text-xl text-zinc-500">
             Sou desenvolvedor Frontend
           </p>
-          <a href={cv} download="CV" target="_blank">
-            <button className="h-8 w-36 mt-4 text-sm font-dm bg-purple-500 hover:bg-purple-600 text-zinc-200 rounded-full transition">
+          <button className="h-8 w-36 mt-4 text-sm font-dm bg-purple-500 hover:bg-purple-600 text-zinc-200 rounded-full transition">
+            <a href={cv} download="CV" target="_blank">
               Download CV
-            </button>
-          </a>
+            </a>
+          </button>
         </div>
         <img className="h-128 w-128" src="/logo.webp" alt="Logo" />
       </div>
