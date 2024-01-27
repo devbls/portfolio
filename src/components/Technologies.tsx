@@ -16,6 +16,7 @@ import {
   SiChakraui,
 } from "react-icons/si";
 import { DiScrum } from "react-icons/di";
+import { useTranslation } from "react-i18next";
 
 const TECHNOLOGIES = [
   {
@@ -96,12 +97,14 @@ const TECHNOLOGIES = [
 ];
 
 export const Technologies = () => {
+  const { t } = useTranslation("techs");
+
   return (
     <div
       id="techs"
       className="flex flex-col items-center justify-center min-h-[120vh]"
     >
-      <h2 className="font-dm text-3xl font-bold text-zinc-50">Tecnologias</h2>
+      <h2 className="font-dm text-3xl font-bold text-zinc-50">{t("title")}</h2>
       <div className="max-w-4xl grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] gap-6 mt-8">
         {TECHNOLOGIES.map((tech) => (
           <a href={tech.link} target="_blank">

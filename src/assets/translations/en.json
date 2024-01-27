@@ -3,5 +3,16 @@
     "about": "About",
     "projects": "Projects",
     "techs": "Technologies"
+  },
+  "firstSection": {
+    "title": "Hi, I'm",
+    "subtitle": "I'm a Frontend developer"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I'm a software developer, with experience in React and React Native. I am always willing to face new challenges and learn new technologies, while improving my communication skills. I also seek to build a network of contacts and acquire as much knowledge as possible."
+  },
+  "techs": {
+    "title": "Technologies"
   }
 }

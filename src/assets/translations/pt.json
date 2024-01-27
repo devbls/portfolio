@@ -3,5 +3,16 @@
     "about": "Sobre",
     "projects": "Projetos",
     "techs": "Tecnologias"
+  },
+  "firstSection": {
+    "title": "Olá, eu sou o",
+    "subtitle": "Sou desenvolvedor Frontend"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "description": "Sou desenvolvedor de software, com experiência em React e React Native. Estou sempre disposto a enfrentar novos desafios e aprender novas tecnologias, enquanto aprimoro minhas habilidades de comunicação. Busco também construir uma rede de contatos e adquirir o máximo de conhecimento possível."
+  },
+  "techs": {
+    "title": "Tecnologias"
   }
 }
