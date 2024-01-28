@@ -8,7 +8,7 @@ export const FirstSection = () => {
   const { t } = useTranslation("firstSection");
 
   return (
-    <div className="h-[calc(100vh-5rem)]">
+    <div className="min-h-[375px] h-[calc(100vh-5rem)]">
       <div className="h-full flex items-center justify-center sm:justify-between sm:px-12 md:px-16 lg:px-20">
         <div className="flex flex-col gap-2">
           <p className="font-poppins text-center sm:text-left text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-zinc-50">
