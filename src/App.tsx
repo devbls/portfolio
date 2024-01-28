@@ -23,14 +23,15 @@ i18next.use(initReactI18next).init({
 
 function App() {
   return (
-    <div className="w-screen max-w-[100%] bg-black-500">
+    <div className="w-screen max-w-[100%] bg-black-500 pb-8">
       <Navbar />
-      <div>
+      <main>
         <FirstSection />
         <About />
         <Projects />
+        <div id="techs" />
         <Technologies />
-      </div>
+      </main>
     </div>
   );
 }

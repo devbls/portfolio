@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-col items-center justify-center h-3/4 sm:h-[85vh] gap-6"
+      className="flex flex-col items-center justify-center  min-h-[100vh] sm:h-[85vh] gap-6"
     >
       <h1 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
         {t("title")}
