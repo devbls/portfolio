@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const PROJECTS = [
@@ -16,12 +17,14 @@ const PROJECTS = [
 ];
 
 export const Projects = () => {
+  const { t } = useTranslation("projects");
+
   return (
     <div
       id="projects"
       className="flex flex-col items-center justify-center min-h-[120vh]"
     >
-      <h2 className="font-dm text-3xl font-bold text-zinc-50">Projetos</h2>
+      <h2 className="font-dm text-3xl font-bold text-zinc-50">{t("title")}</h2>
       <div className="max-w-5xl grid grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] gap-6 mt-8">
         {PROJECTS.map((project) => (
           <a

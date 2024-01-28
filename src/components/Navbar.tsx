@@ -14,9 +14,11 @@ export const Navbar = () => {
               {t("about")}
             </span>
           </a>
-          <span className="font-poppins text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
-            {t("projects")}
-          </span>
+          <a href="#projects">
+            <span className="font-poppins text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
+              {t("projects")}
+            </span>
+          </a>
           <a href="#techs">
             <span className="font-poppins text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
               {t("techs")}
