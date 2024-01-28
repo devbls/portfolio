@@ -9,14 +9,18 @@ export const FirstSection = () => {
 
   return (
     <div className="h-[calc(100vh-5rem)]">
-      <div className="h-full flex items-center justify-between px-20">
+      <div className="h-full flex items-center justify-center sm:justify-between sm:px-12 md:px-16 lg:px-20">
         <div className="flex flex-col gap-2">
-          <p className="font-poppins text-5xl text-zinc-50">{t("title")}</p>
-          <span className="font-poppins text-5xl text-purple-500">
+          <p className="font-poppins text-center sm:text-left text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-zinc-50">
+            {t("title")}
+          </p>
+          <span className="font-poppins text-center sm:text-left text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-purple-500">
             Brenno Santos
           </span>
-          <p className="font-poppins text-xl text-zinc-500">{t("subtitle")}</p>
-          <div className="flex items-center mt-4 gap-6">
+          <p className="font-poppins text-center sm:text-left text-lg sm:text-base md:text-lg lg:text-xl text-zinc-500">
+            {t("subtitle")}
+          </p>
+          <div className="flex flex-col lg:flex-row sm:items-start md:items-start items-center mt-2 lg:mt-4 gap-4 lg:gap-6">
             <button className="h-8 w-36 text-sm font-dm bg-purple-500 hover:bg-purple-600 text-zinc-200 rounded-full transition">
               <a href={cv} download="CV" target="_blank">
                 Download CV
@@ -44,7 +48,11 @@ export const FirstSection = () => {
             </div>
           </div>
         </div>
-        <img className="h-128 w-128" src="/logo.webp" alt="Big Logo" />
+        <img
+          className="hidden sm:block sm:h-64 sm:w-64 md:h-80 md:w-80 lg:h-96 lg:w-96"
+          src="/logo.webp"
+          alt="Big Logo"
+        />
       </div>
     </div>
   );
