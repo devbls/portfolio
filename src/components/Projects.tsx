@@ -14,6 +14,12 @@ const PROJECTS = [
     thumb: "primeit.png",
     alt: "PrimeIT Project thumb",
   },
+  {
+    link: "https://www.nextengineering.pt",
+    name: "NEXT Engineering Website",
+    thumb: "next.png",
+    alt: "Next Engineering Project thumb",
+  },
 ];
 
 export const Projects = () => {
