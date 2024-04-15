@@ -13,8 +13,10 @@
     "@fontsource-variable/dm-sans": "^5.0.3",
     "@fontsource/poppins": "^5.0.8",
     "i18next": "^23.7.18",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
     "react-i18next": "^14.0.1",
     "react-icons": "^5.0.1"
   },
