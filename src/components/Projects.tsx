@@ -20,6 +20,12 @@ const PROJECTS = [
     thumb: "next.png",
     alt: "Next Engineering Project thumb",
   },
+  {
+    link: "https://www.primenearshore.com",
+    name: "Prime Nearshore Website",
+    thumb: "nearshore.png",
+    alt: "Prime Nearshore Project thumb",
+  },
 ];
 
 export const Projects = () => {
