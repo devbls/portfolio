@@ -30,11 +30,11 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
             {t("about")}
           </span>
         </a>
-        <a href="#projects" onClick={() => setOpen(false)}>
+        {/* <a href="#projects" onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("projects")}
           </span>
-        </a>
+        </a> */}
         <a href="#techs" onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("techs")}
