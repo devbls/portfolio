@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { FirstSection } from "./components/FirstSection";
 import { About } from "./components/About";
 import { Technologies } from "./components/Technologies";
+import { Projects } from "./components/Projects";
 import en from "./assets/translations/en.json";
 import pt from "./assets/translations/pt.json";
 
@@ -27,7 +28,7 @@ function App() {
       <main>
         <FirstSection />
         <About />
-        {/* <Projects /> */}
+        <Projects />
         <div id="techs" />
         <Technologies />
       </main>

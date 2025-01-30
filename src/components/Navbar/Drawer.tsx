@@ -30,11 +30,11 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
             {t("about")}
           </span>
         </a>
-        {/* <a href="#projects" onClick={() => setOpen(false)}>
+        <a href="#projects" onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("projects")}
           </span>
-        </a> */}
+        </a>
         <a href="#techs" onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("techs")}
@@ -60,7 +60,6 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
           </button>
         </div>
       </nav>
-
       <button
         className={`w-8 h-8 absolute top-6 right-4 transition-all duration-500 ${
           isOpen ? "opacity-100" : "opacity-0"

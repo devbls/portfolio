@@ -3,6 +3,12 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const PROJECTS = [
   {
+    link: "https://espaco-nandi.vercel.app/",
+    name: "Espaço Nandi",
+    thumb: "espaco-nandi.png",
+    alt: "Espaço Nandi thumb",
+  },
+  {
     link: "https://www.klx.pt",
     name: "KLx Website",
     thumb: "klx.png",
@@ -13,12 +19,6 @@ const PROJECTS = [
     name: "PrimeIT Website",
     thumb: "primeit.png",
     alt: "PrimeIT Project thumb",
-  },
-  {
-    link: "https://www.nextengineering.pt",
-    name: "NEXT Engineering Website",
-    thumb: "next.png",
-    alt: "Next Engineering Project thumb",
   },
   {
     link: "https://www.primenearshore.com",

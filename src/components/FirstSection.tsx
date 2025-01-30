@@ -28,7 +28,7 @@ export const FirstSection = () => {
             </button>
             <div className="flex gap-3">
               <a
-                href="https://www.linkedin.com/in/brenno-luis/"
+                href="https://www.linkedin.com/in/brenno-santos-57399b334/"
                 target="_blank"
               >
                 <div className="p-2 text-purple-500 border border-stone-600 rounded-md hover:border-purple-500 transition-all duration-300">
