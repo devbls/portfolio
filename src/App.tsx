@@ -6,6 +6,7 @@ import { FirstSection } from "./components/FirstSection";
 import { About } from "./components/About";
 import { Technologies } from "./components/Technologies";
 import { Projects } from "./components/Projects";
+import { Contacts } from "./components/Contacts";
 import en from "./assets/translations/en.json";
 import pt from "./assets/translations/pt.json";
 
@@ -31,6 +32,7 @@ function App() {
         <Projects />
         <div id="techs" />
         <Technologies />
+        <Contacts />
       </main>
     </div>
   );
