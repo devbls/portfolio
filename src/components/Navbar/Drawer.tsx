@@ -40,6 +40,11 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
             {t("techs")}
           </span>
         </a>
+        <a href="#contacts" onClick={() => setOpen(false)}>
+          <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
+            {t("contacts")}
+          </span>
+        </a>
         <div className="flex items-center mt-auto">
           <button
             className={`h-10 w-12 text-purple-500 font-poppins ${

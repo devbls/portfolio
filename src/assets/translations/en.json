@@ -2,7 +2,8 @@
   "tabs": {
     "about": "About",
     "projects": "Projects",
-    "techs": "Technologies"
+    "techs": "Technologies",
+    "contacts": "Contacts"
   },
   "firstSection": {
     "title": "Hi, I'm",

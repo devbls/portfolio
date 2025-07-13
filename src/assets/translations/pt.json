@@ -2,7 +2,8 @@
   "tabs": {
     "about": "Sobre",
     "projects": "Projetos",
-    "techs": "Tecnologias"
+    "techs": "Tecnologias",
+    "contacts": "Contatos"
   },
   "firstSection": {
     "title": "Olá, me chamo",

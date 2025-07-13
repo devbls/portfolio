@@ -3,28 +3,64 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const PROJECTS = [
   {
+    link: "https://www.telhanorte.com.br/",
+    name: "Telhanorte",
+    thumb: "telhanorte.png",
+    alt: "Telhanorte"
+  },
+  {
+    link: "https://www.enviapecas.com.br/",
+    name: "Envia Peças",
+    thumb: "enviapecas.png",
+    alt: "Envia Peças"
+  },
+  {
+    link: "https://www.tumelero.com.br/",
+    name: "Tumelero",
+    thumb: "tumelero.png",
+    alt: "Tumelero"
+  },
+  {
+    link: "https://www.ascona.com.br/",
+    name: "Ascona",
+    thumb: "ascona.png",
+    alt: "Ascona"
+  },
+  {
+    link: "https://www.intimastore.com.br/",
+    name: "Intima Store",
+    thumb: "intimastore.png",
+    alt: "Intima Store"
+  },
+  {
+    link: "https://www.conscienciajeans.com.br/",
+    name: "Consciência Jeans",
+    thumb: "conscienciajeans.png",
+    alt: "Consciência Jeans"
+  },
+  {
     link: "https://espaco-nandi.vercel.app/",
     name: "Espaço Nandi",
     thumb: "espaco-nandi.png",
-    alt: "Espaço Nandi thumb",
+    alt: "Espaço Nandi"
   },
   {
     link: "https://www.klx.pt",
     name: "KLx Website",
     thumb: "klx.png",
-    alt: "KLX Project thumb",
+    alt: "KLX",
   },
   {
     link: "https://www.primeit.pt",
     name: "PrimeIT Website",
     thumb: "primeit.png",
-    alt: "PrimeIT Project thumb",
+    alt: "PrimeIT"
   },
   {
     link: "https://www.primenearshore.com",
     name: "Prime Nearshore Website",
     thumb: "nearshore.png",
-    alt: "Prime Nearshore Project thumb",
+    alt: "Prime Nearshore"
   },
 ];
 
@@ -34,7 +70,7 @@ export const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex flex-col items-center justify-center min-h-[120vh]"
+      className="flex flex-col items-center justify-center min-h-[120vh] scroll-mt-20"
     >
       <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
         {t("title")}

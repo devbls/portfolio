@@ -30,6 +30,11 @@ export const Navbar = () => {
               {t("techs")}
             </span>
           </a>
+          <a href="#contacts">
+            <span className="font-poppins md:text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
+              {t("contacts")}
+            </span>
+          </a>
         </nav>
         <div className="hidden sm:flex items-center gap-2">
           <button
