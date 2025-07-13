@@ -4,6 +4,9 @@ import {
   FaCss3Alt,
   FaGitAlt,
   FaNodeJs,
+  FaAngular,
+  FaDocker,
+  FaFigma
 } from "react-icons/fa";
 import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
 import {
@@ -11,9 +14,9 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiRedux,
-  SiReactquery,
   SiStrapi,
   SiChakraui,
+  SiVtex
 } from "react-icons/si";
 import { DiScrum } from "react-icons/di";
 import { useTranslation } from "react-i18next";
@@ -50,6 +53,16 @@ const TECHNOLOGIES = [
     link: "https://nextjs.org",
   },
   {
+    name: "VTEX",
+    icon: <SiVtex size={56} />,
+    link: "https://vtex.com/",
+  },
+  {
+    name: "Nodejs",
+    icon: <FaNodeJs size={56} />,
+    link: "https://nodejs.org/en",
+  },
+  {
     name: "React Native",
     icon: <TbBrandReactNative size={56} />,
     link: "https://reactnative.dev",
@@ -58,6 +71,11 @@ const TECHNOLOGIES = [
     name: "Git",
     icon: <FaGitAlt size={56} />,
     link: "https://git-scm.com",
+  },
+  {
+    name: "Angular",
+    icon: <FaAngular size={56} />,
+    link: "https://angular.dev/",
   },
   {
     name: "Tailwind CSS",
@@ -75,24 +93,24 @@ const TECHNOLOGIES = [
     link: "https://redux.js.org",
   },
   {
-    name: "React Query",
-    icon: <SiReactquery size={56} />,
-    link: "https://tanstack.com/query/latest/docs/framework/react/overview",
-  },
-  {
     name: "Strapi",
     icon: <SiStrapi size={56} />,
     link: "https://strapi.io",
   },
   {
-    name: "Nodejs",
-    icon: <FaNodeJs size={56} />,
-    link: "https://nodejs.org/en",
-  },
-  {
     name: "Scrum",
     icon: <DiScrum size={56} />,
     link: "https://www.scrum.org",
+  },
+  {
+    name: "Docker",
+    icon: <FaDocker size={56} />,
+    link: "https://www.docker.com/",
+  },
+  {
+    name: "Figma",
+    icon: <FaFigma size={56} />,
+    link: "https://www.figma.com/",
   },
 ];
 
@@ -100,8 +118,10 @@ export const Technologies = () => {
   const { t } = useTranslation("techs");
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[120vh] pt-24 sm:pt-16 md:pt-8">
-      <h2 className="font-dm text-3xl font-bold text-zinc-50">{t("title")}</h2>
+    <div className="flex flex-col items-center justify-center min-h-[120vh] pt-24">
+      <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
+        {t("title")}
+      </h2>
       <div className="max-w-4xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 mt-8">
         {TECHNOLOGIES.map((tech) => (
           <a href={tech.link} target="_blank">
