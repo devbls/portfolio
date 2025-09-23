@@ -14,6 +14,15 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         dm: ["DM Sans Variable", "serif"],
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in": "fadeIn 1.5s ease-out forwards",
+      },
     },
   },
   plugins: [],

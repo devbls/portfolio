@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import {
   FaReact,
   FaHtml5,
@@ -20,6 +21,8 @@ import {
 } from "react-icons/si";
 import { DiScrum } from "react-icons/di";
 import { useTranslation } from "react-i18next";
+
+import { useFadeInOnScroll } from "../hooks/useFadeInOnScroll";
 
 const TECHNOLOGIES = [
   {
@@ -116,9 +119,11 @@ const TECHNOLOGIES = [
 
 export const Technologies = () => {
   const { t } = useTranslation("techs");
+  const ref = useRef(null);
+  const isVisible = useFadeInOnScroll(ref);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[120vh] pt-24">
+    <div ref={ref} className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
       <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
         {t("title")}
       </h2>

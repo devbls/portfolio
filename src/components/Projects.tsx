@@ -1,7 +1,15 @@
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useFadeInOnScroll } from "../hooks/useFadeInOnScroll";
 
 const PROJECTS = [
+  {
+    link: "https://cumulusled.com.br/",
+    name: "Cumulus LED",
+    thumb: "cumulus.png",
+    alt: "Cumulus LED"
+  },
   {
     link: "https://www.telhanorte.com.br/",
     name: "Telhanorte",
@@ -66,11 +74,14 @@ const PROJECTS = [
 
 export const Projects = () => {
   const { t } = useTranslation("projects");
+  const ref = useRef(null);
+  const isVisible = useFadeInOnScroll(ref);
 
   return (
     <div
+      ref={ref}
       id="projects"
-      className="flex flex-col items-center justify-center min-h-[120vh] pt-24 sm:pt-8 scroll-mt-20"
+      className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 sm:pt-8 scroll-mt-20 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
         {t("title")}
