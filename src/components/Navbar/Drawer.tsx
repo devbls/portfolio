@@ -25,22 +25,22 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
           (isOpen ? " translate-x-0 " : " translate-x-full ")
         }
       >
-        <a href="#about" onClick={() => setOpen(false)}>
+        <a href="#about" aria-label={`${t("nav-link-aria-label")} ${t("about")}`} onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("about")}
           </span>
         </a>
-        <a href="#projects" onClick={() => setOpen(false)}>
+        <a href="#projects" aria-label={`${t("nav-link-aria-label")} ${t("projects")}`} onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("projects")}
           </span>
         </a>
-        <a href="#techs" onClick={() => setOpen(false)}>
+        <a href="#techs" aria-label={`${t("nav-link-aria-label")} ${t("techs")}`} onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("techs")}
           </span>
         </a>
-        <a href="#contacts" onClick={() => setOpen(false)}>
+        <a href="#contacts" aria-label={`${t("nav-link-aria-label")} ${t("contacts")}`} onClick={() => setOpen(false)}>
           <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
             {t("contacts")}
           </span>
@@ -66,6 +66,7 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
         </div>
       </nav>
       <button
+        aria-label={t("drawer-icon-aria-label")}
         className={`w-8 h-8 absolute top-6 right-4 transition-all duration-500 ${
           isOpen ? "opacity-100" : "opacity-0"
         }`}

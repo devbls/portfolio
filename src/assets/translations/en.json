@@ -3,7 +3,9 @@
     "about": "About",
     "projects": "Projects",
     "techs": "Technologies",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "drawer-icon-aria-label": "Open navigation menu",
+    "nav-link-aria-label": "Go to page"
   },
   "firstSection": {
     "title": "Hi, I'm",
@@ -21,6 +23,9 @@
     "title": "Technologies"
   },
   "contacts": {
-    "title": "Contacts"
+    "title": "Contacts",
+    "linkedin-link-aria-label": "Go to LinkedIn",
+    "github-link-aria-label": "Go to Github",
+    "email-link-aria-label": "Send e-mail"
   }
 }

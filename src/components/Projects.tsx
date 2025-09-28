@@ -7,67 +7,67 @@ const PROJECTS = [
   {
     link: "https://cumulusled.com.br/",
     name: "Cumulus LED",
-    thumb: "cumulus.png",
+    thumb: "cumulus.webp",
     alt: "Cumulus LED"
   },
   {
     link: "https://www.telhanorte.com.br/",
     name: "Telhanorte",
-    thumb: "telhanorte.png",
+    thumb: "telhanorte.webp",
     alt: "Telhanorte"
   },
   {
     link: "https://www.enviapecas.com.br/",
     name: "Envia Peças",
-    thumb: "enviapecas.png",
+    thumb: "enviapecas.webp",
     alt: "Envia Peças"
   },
   {
     link: "https://www.tumelero.com.br/",
     name: "Tumelero",
-    thumb: "tumelero.png",
+    thumb: "tumelero.webp",
     alt: "Tumelero"
   },
   {
     link: "https://www.ascona.com.br/",
     name: "Ascona",
-    thumb: "ascona.png",
+    thumb: "ascona.webp",
     alt: "Ascona"
   },
   {
     link: "https://www.intimastore.com.br/",
     name: "Intima Store",
-    thumb: "intimastore.png",
+    thumb: "intimastore.webp",
     alt: "Intima Store"
   },
   {
     link: "https://www.conscienciajeans.com.br/",
     name: "Consciência Jeans",
-    thumb: "conscienciajeans.png",
+    thumb: "conscienciajeans.webp",
     alt: "Consciência Jeans"
   },
   {
     link: "https://espaco-nandi.vercel.app/",
     name: "Espaço Nandi",
-    thumb: "espaco-nandi.png",
+    thumb: "espaco-nandi.webp",
     alt: "Espaço Nandi"
   },
   {
     link: "https://www.klx.pt",
     name: "KLx Website",
-    thumb: "klx.png",
+    thumb: "klx.webp",
     alt: "KLX",
   },
   {
     link: "https://www.primeit.pt",
     name: "PrimeIT Website",
-    thumb: "primeit.png",
+    thumb: "primeit.webp",
     alt: "PrimeIT"
   },
   {
     link: "https://www.primenearshore.com",
     name: "Prime Nearshore Website",
-    thumb: "nearshore.png",
+    thumb: "nearshore.webp",
     alt: "Prime Nearshore"
   },
 ];
@@ -89,6 +89,7 @@ export const Projects = () => {
       <div className="max-w-5xl grid md:grid-cols-2 lg:grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] gap-12 lg:gap-6 mt-12 sm:mt-8">
         {PROJECTS.map((project) => (
           <a
+            key={project.name}
             className="w-[280px] h-[180px] md:w-[320px] md:h-[200px] group rounded-md relative overflow-hidden transition-all duration-300 border border-purple-500 sm:border-stone-700 sm:hover:border-purple-500"
             href={project.link}
             target="_blank"

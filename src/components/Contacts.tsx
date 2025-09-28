@@ -17,17 +17,18 @@ export const Contacts = () => {
         <a
           href="https://www.linkedin.com/in/brenno-santos-57399b334/"
           target="_blank"
+          aria-label={t("linkedin-link-aria-label")}
         >
           <div className="p-2 text-purple-500 border border-stone-600 rounded-md hover:border-purple-500 transition-all duration-300">
             <FaLinkedinIn size={20} />
           </div>
         </a>
-        <a href="https://github.com/devbls" target="_blank">
+        <a href="https://github.com/devbls" target="_blank" aria-label={t("github-link-aria-label")}>
           <div className="p-2 text-purple-500 border border-stone-600 rounded-md hover:border-purple-500 transition-all duration-300">
             <FaGithub size={20} />
           </div>
         </a>
-        <a href="mailto:devblsds@gmail.com" target="_blank">
+        <a href="mailto:devblsds@gmail.com" target="_blank" aria-label={t("email-link-aria-label")}>
           <div className="p-2 text-purple-500 border border-stone-600 rounded-md hover:border-purple-500 transition-all duration-300">
             <BiLogoGmail size={20} />
           </div>
