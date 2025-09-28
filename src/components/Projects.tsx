@@ -104,7 +104,7 @@ export const Projects = () => {
               src={`/thumbs/${project.thumb}`}
               alt={project.alt}
             />
-            <div className="block sm:hidden w-[280px] h-[180px] md:w-[320px] md:h-[200px] bg-black-400 opacity-70 content-[''] sm:group-hover:block absolute top-0 left-0 z-10" />
+            <div className="block w-[280px] h-[180px] md:w-[320px] md:h-[200px] bg-black-400 sm:bg-[#00000070] sm:group-hover:bg-black-400 opacity-70 content-[''] sm:group-hover:block absolute top-0 left-0 z-10" />
             <div className="visible sm:invisible group-hover:visible block absolute top-2 right-2 z-10 text-purple-500 transition-all duration-300 sm:opacity-0 sm:group-hover:opacity-100">
               <FaExternalLinkAlt size={16} />
             </div>

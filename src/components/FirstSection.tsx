@@ -13,7 +13,7 @@ export const FirstSection = () => {
           <span className="font-poppins text-center sm:text-left text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-purple-500 animate-fade-in">
             Brenno Santos
           </span>
-          <p className="w-[90vw] max-w-[375px] sm:max-w-[320px] md:w-full md:max-w-[415px] font-poppins text-center sm:text-left text-lg sm:text-base md:text-lg lg:text-xl text-zinc-500 animate-fade-in">
+          <p className="w-[90vw] max-w-[375px] sm:max-w-[320px] md:w-full md:max-w-[415px] font-poppins text-center sm:text-left text-lg sm:text-base md:text-lg lg:text-xl text-zinc-400 animate-fade-in">
             {t("subtitle")}
           </p>
         </div>
