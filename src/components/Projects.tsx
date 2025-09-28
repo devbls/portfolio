@@ -8,67 +8,67 @@ const PROJECTS = [
     link: "https://cumulusled.com.br/",
     name: "Cumulus LED",
     thumb: "cumulus.webp",
-    alt: "Cumulus LED"
+    alt: "Cumulus LED Thumbnail"
   },
   {
     link: "https://www.telhanorte.com.br/",
     name: "Telhanorte",
     thumb: "telhanorte.webp",
-    alt: "Telhanorte"
+    alt: "Telhanorte Thumbnail"
   },
   {
     link: "https://www.enviapecas.com.br/",
     name: "Envia Peças",
     thumb: "enviapecas.webp",
-    alt: "Envia Peças"
+    alt: "Envia Peças Thumbnail"
   },
   {
     link: "https://www.tumelero.com.br/",
     name: "Tumelero",
     thumb: "tumelero.webp",
-    alt: "Tumelero"
+    alt: "Tumelero Thumbnail"
   },
   {
     link: "https://www.ascona.com.br/",
     name: "Ascona",
     thumb: "ascona.webp",
-    alt: "Ascona"
+    alt: "Ascona Thumbnail"
   },
   {
     link: "https://www.intimastore.com.br/",
     name: "Intima Store",
     thumb: "intimastore.webp",
-    alt: "Intima Store"
+    alt: "Intima Store Thumbnail"
   },
   {
     link: "https://www.conscienciajeans.com.br/",
     name: "Consciência Jeans",
     thumb: "conscienciajeans.webp",
-    alt: "Consciência Jeans"
+    alt: "Consciência Jeans Thumbnail"
   },
   {
     link: "https://espaco-nandi.vercel.app/",
     name: "Espaço Nandi",
     thumb: "espaco-nandi.webp",
-    alt: "Espaço Nandi"
+    alt: "Espaço Nandi Thumbnail"
   },
   {
     link: "https://www.klx.pt",
     name: "KLx Website",
     thumb: "klx.webp",
-    alt: "KLX",
+    alt: "KLX Thumbnail",
   },
   {
     link: "https://www.primeit.pt",
     name: "PrimeIT Website",
     thumb: "primeit.webp",
-    alt: "PrimeIT"
+    alt: "PrimeIT Thumbnail"
   },
   {
     link: "https://www.primenearshore.com",
     name: "Prime Nearshore Website",
     thumb: "nearshore.webp",
-    alt: "Prime Nearshore"
+    alt: "Prime Nearshore Thumbnail"
   },
 ];
 

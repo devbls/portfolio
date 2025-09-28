@@ -60,6 +60,7 @@ export const Navbar = () => {
           </button>
         </div>
         <button
+          aria-label={t("drawer-icon-aria-label")}
           className="block sm:hidden hover:opacity-75 active:opacity-60 transition"
           onClick={() => setDrawerOpen((prevState) => !prevState)}
         >

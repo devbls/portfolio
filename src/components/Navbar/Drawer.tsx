@@ -66,7 +66,7 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
         </div>
       </nav>
       <button
-        aria-label={t("drawer-icon-aria-label")}
+        aria-label={t("drawer-close-icon-aria-label")}
         className={`w-8 h-8 absolute top-6 right-4 transition-all duration-500 ${
           isOpen ? "opacity-100" : "opacity-0"
         }`}

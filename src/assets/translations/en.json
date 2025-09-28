@@ -5,6 +5,7 @@
     "techs": "Technologies",
     "contacts": "Contacts",
     "drawer-icon-aria-label": "Open navigation menu",
+    "drawer-close-icon-aria-label": "Close navigation menu",
     "nav-link-aria-label": "Go to page"
   },
   "firstSection": {
