@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 import "@fontsource/poppins";
 import "@fontsource-variable/dm-sans";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import App from "./App.tsx";
