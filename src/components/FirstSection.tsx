@@ -19,7 +19,7 @@ export const FirstSection = () => {
         </div>
         <img
           className="animate-slide-in-right hidden sm:block sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-96 lg:w-96 animate-fade-in"
-          src="/logo.webp"
+          src="/big-logo.webp"
           alt="Big Logo"
           fetchpriority="high"
         />
