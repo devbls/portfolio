@@ -19,7 +19,7 @@ export const About = () => {
       <h1 className={`font-dm text-4xl sm:text-3xl font-bold text-zinc-50`}>
         {t("title")}
       </h1>
-      <p className="w-9/12 sm:w-10/12 md:w-8/12 lg:w-7/12 max-w-2xl font-dm text-xl text-zinc-500 text-center leading-8">
+      <p className="w-10/12 sm:w-10/12 md:w-8/12 lg:w-7/12 max-w-2xl font-dm text-lg sm:text-2xl text-zinc-400 text-center leading-8">
         {t("description")}
       </p>
       <button className="flex items-center justify-center h-9 w-40 gap-1 text-sm font-dm font-semibold bg-purple-500 hover:bg-purple-600 text-zinc-200 rounded-md transition">
