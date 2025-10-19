@@ -103,6 +103,7 @@ export const Projects = () => {
               className="w-[280px] h-[180px] md:w-[320px] md:h-[200px] object-cover transition-all duration-300 sm:group-hover:scale-105 blur-[1px] sm:blur-0 sm:group-hover:blur-[1px]"
               src={`/thumbs/${project.thumb}`}
               alt={project.alt}
+              loading="lazy"
             />
             <div className="block w-[280px] h-[180px] md:w-[320px] md:h-[200px] bg-black-400 sm:bg-[#00000070] sm:group-hover:bg-black-400 opacity-70 content-[''] sm:group-hover:block absolute top-0 left-0 z-10" />
             <div className="visible sm:invisible group-hover:visible block absolute top-2 right-2 z-10 text-purple-500 transition-all duration-300 sm:opacity-0 sm:group-hover:opacity-100">
