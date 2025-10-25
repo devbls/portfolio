@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import {
   FaReact,
   FaHtml5,
@@ -123,21 +123,25 @@ const Technologies = () => {
   const isVisible = useFadeInOnScroll(ref);
 
   return (
-    <div ref={ref} id="techs" className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-      <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
-        {t("title")}
-      </h2>
-      <div className="max-w-4xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 mt-8">
-        {TECHNOLOGIES.map((tech) => (
-          <a key={tech.name} href={tech.link} target="_blank">
-            <div className="flex flex-col gap-4 items-center justify-center h-36 w-36 bg-black-400 text-purple-500 rounded-md border border-stone-700 sm:hover:border-purple-500 transition-all duration-300">
-              <p className="font-poppins text-md mt-4">{tech.name}</p>
-              <div className="mb-auto">{tech.icon}</div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
+    <Suspense fallback={null}>
+      {isVisible ? (
+        <div ref={ref} id="techs" className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+          <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
+            {t("title")}
+          </h2>
+          <div className="max-w-4xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 mt-8">
+            {TECHNOLOGIES.map((tech) => (
+              <a key={tech.name} href={tech.link} target="_blank">
+                <div className="flex flex-col gap-4 items-center justify-center h-36 w-36 bg-black-400 text-purple-500 rounded-md border border-stone-700 sm:hover:border-purple-500 transition-all duration-300">
+                  <p className="font-poppins text-md mt-4">{tech.name}</p>
+                  <div className="mb-auto">{tech.icon}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ) : <></>}
+    </Suspense>
   );
 };
 

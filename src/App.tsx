@@ -1,11 +1,11 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import { Navbar } from "./components/Navbar";
 import { FirstSection } from "./components/FirstSection";
 import { About } from "./components/About";
-import { Contacts } from "./components/Contacts";
+const Contacts = lazy(() => import('./components/Contacts'));
 const Projects = lazy(() => import('./components/Projects'));
 const Technologies = lazy(() => import('./components/Technologies'));
 import en from "./assets/translations/en.json";
@@ -30,12 +30,8 @@ function App() {
       <main>
         <FirstSection />
         <About />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Projects />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Technologies />
-        </Suspense>
+        <Projects />
+        <Technologies />
         <Contacts />
       </main>
     </div>
