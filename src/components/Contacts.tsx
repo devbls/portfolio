@@ -1,14 +1,20 @@
+import { useRef } from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
 
-export const Contacts = () => {
+import { useFadeInOnScroll } from "../hooks/useFadeInOnScroll";
+
+const Contacts = () => {
   const { t } = useTranslation("contacts");
+  const ref = useRef(null);
+  const isVisible = useFadeInOnScroll(ref);
 
   return (
     <div
       id="contacts"
-      className="flex flex-col items-center justify-center min-h-[50vh]"
+      ref={ref}
+      className={`flex flex-col items-center justify-center min-h-[50vh] transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
         {t("title")}
@@ -37,3 +43,5 @@ export const Contacts = () => {
     </div>
   );
 }
+
+export default Contacts;
