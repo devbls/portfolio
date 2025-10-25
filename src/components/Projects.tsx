@@ -113,7 +113,7 @@ export const Projects = () => {
             </div>
             <img
               className="w-[280px] h-[180px] md:w-[320px] md:h-[200px] object-cover transition-all duration-300 sm:group-hover:scale-105 blur-[1px] sm:blur-0 sm:group-hover:blur-[1px]"
-              src={`/thumbs/${project.thumb}`}
+              src={`/assets/thumbs/${project.thumb}`}
               alt={project.alt}
               loading="lazy"
             />

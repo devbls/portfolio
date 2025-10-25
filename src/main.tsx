@@ -1,4 +1,3 @@
-import "@fontsource/poppins";
 import "@fontsource-variable/dm-sans";
 import React from "react";
 import ReactDOM from "react-dom/client";
