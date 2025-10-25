@@ -13,7 +13,7 @@ export const Navbar = () => {
   return (
     <header className="w-full flex items-center h-20 bg-black-500 sticky -top-4 z-50 shadow-xl">
       <div className="w-full flex justify-between items-center h-16 px-4 bg-black-500 sticky top-0">
-        <img className="h-10 w-10 md:h-12 md:w-12 object-none" src="/logo.webp" alt="Logo" />
+        <img className="h-12 w-12 object-none" src="/logo.webp" alt="Logo" />
         <nav className="hidden sm:flex gap-12">
           <a href="#about" aria-label={`${t("nav-link-aria-label")} ${t("about")}`}>
             <span className="font-poppins md:text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
