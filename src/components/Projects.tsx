@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { FaExternalLinkAlt } from "react-icons/fa";
+
 import { useFadeInOnScroll } from "../hooks/useFadeInOnScroll";
 
 const PROJECTS = [
