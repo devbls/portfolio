@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -30,9 +30,12 @@ function App() {
       <main>
         <FirstSection />
         <About />
-        <Projects />
-        <div id="techs" />
-        <Technologies />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Technologies />
+        </Suspense>
         <Contacts />
       </main>
     </div>

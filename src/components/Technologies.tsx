@@ -123,7 +123,7 @@ const Technologies = () => {
   const isVisible = useFadeInOnScroll(ref);
 
   return (
-    <div ref={ref} className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+    <div ref={ref} id="techs" className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
       <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
         {t("title")}
       </h2>
