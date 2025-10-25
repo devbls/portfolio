@@ -1,6 +1,6 @@
-import { MutableRefObject, useEffect, useState } from "react";
+import { type RefObject, useEffect, useState } from "react";
 
-export function useFadeInOnScroll(ref: MutableRefObject<null>) {
+export function useFadeInOnScroll(ref: RefObject<null>) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

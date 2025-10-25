@@ -5,6 +5,18 @@ import { useFadeInOnScroll } from "../hooks/useFadeInOnScroll";
 
 const PROJECTS = [
   {
+    link: "https://seocamp.com.br/",
+    name: "SEOcamp 2026",
+    thumb: "seocamp.webp",
+    alt: "SEOcamp 2026 Thumbnail"
+  },
+  {
+    link: "https://www.sunbeachrental.com/",
+    name: "Sunbeach Rental",
+    thumb: "sunbeach.webp",
+    alt: "Sunbeach Rental Thumbnail"
+  },
+  {
     link: "https://cumulusled.com.br/",
     name: "Cumulus LED",
     thumb: "cumulus.webp",
@@ -105,7 +117,7 @@ export const Projects = () => {
               alt={project.alt}
               loading="lazy"
             />
-            <div className="block w-[280px] h-[180px] md:w-[320px] md:h-[200px] bg-black-400 sm:bg-[#00000070] sm:group-hover:bg-black-400 opacity-70 content-[''] sm:group-hover:block absolute top-0 left-0 z-10" />
+            <div className="block w-[280px] h-[180px] md:w-[320px] md:h-[200px] bg-black-400 sm:bg-[#00000070] sm:group-hover:bg-black-400 opacity-50 content-[''] sm:group-hover:block absolute top-0 left-0 z-10" />
             <div className="visible sm:invisible group-hover:visible block absolute top-2 right-2 z-10 text-purple-500 transition-all duration-300 sm:opacity-0 sm:group-hover:opacity-100">
               <FaExternalLinkAlt size={16} />
             </div>
