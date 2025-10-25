@@ -84,7 +84,7 @@ const PROJECTS = [
   },
 ];
 
-export const Projects = () => {
+const Projects = () => {
   const { t } = useTranslation("projects");
   const ref = useRef(null);
   const isVisible = useFadeInOnScroll(ref);
@@ -127,3 +127,5 @@ export const Projects = () => {
     </div>
   );
 };
+
+export default Projects;

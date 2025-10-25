@@ -117,7 +117,7 @@ const TECHNOLOGIES = [
   },
 ];
 
-export const Technologies = () => {
+const Technologies = () => {
   const { t } = useTranslation("techs");
   const ref = useRef(null);
   const isVisible = useFadeInOnScroll(ref);
@@ -140,3 +140,5 @@ export const Technologies = () => {
     </div>
   );
 };
+
+export default Technologies;

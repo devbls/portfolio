@@ -1,12 +1,13 @@
+import { lazy } from "react";
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import { Navbar } from "./components/Navbar";
 import { FirstSection } from "./components/FirstSection";
 import { About } from "./components/About";
-import { Technologies } from "./components/Technologies";
-import { Projects } from "./components/Projects";
 import { Contacts } from "./components/Contacts";
+const Projects = lazy(() => import('./components/Projects'));
+const Technologies = lazy(() => import('./components/Technologies'));
 import en from "./assets/translations/en.json";
 import pt from "./assets/translations/pt.json";
 
