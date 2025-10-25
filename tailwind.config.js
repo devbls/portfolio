@@ -11,7 +11,7 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        dm: ["DM Sans Variable", "serif"],
+        dm: ["DMSans", "sans-serif"],
       },
       keyframes: {
         slideInLeft: {
