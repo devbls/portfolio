@@ -6,8 +6,8 @@ import { Navbar } from "./components/Navbar";
 import { FirstSection } from "./components/FirstSection";
 import { About } from "./components/About";
 const Projects = lazy(() => import("./components/Projects"));
-const Contacts = lazy(() => import('./components/Contacts'));
-const Technologies = lazy(() => import('./components/Technologies'));
+const Contacts = lazy(() => import("./components/Contacts"));
+const Technologies = lazy(() => import("./components/Technologies"));
 import en from "./assets/translations/en.json";
 import pt from "./assets/translations/pt.json";
 
@@ -40,15 +40,9 @@ function App() {
       <main>
         <FirstSection />
         <About />
-        <Suspense fallback={<div>Loading...</div>}>
-          {showLazySections && <Projects />}
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          {showLazySections && <Technologies />}
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          {showLazySections && <Contacts />}
-        </Suspense>
+        <Projects />
+        <Technologies />
+        <Contacts />
       </main>
     </div>
   );

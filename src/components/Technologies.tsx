@@ -7,7 +7,7 @@ import {
   FaNodeJs,
   FaAngular,
   FaDocker,
-  FaFigma
+  FaFigma,
 } from "react-icons/fa";
 import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
 import {
@@ -17,7 +17,7 @@ import {
   SiRedux,
   SiStrapi,
   SiChakraui,
-  SiVtex
+  SiVtex,
 } from "react-icons/si";
 import { DiScrum } from "react-icons/di";
 import { useTranslation } from "react-i18next";
@@ -123,8 +123,12 @@ const Technologies = () => {
   const isVisible = useFadeInOnScroll(ref);
 
   return (
-    <div ref={ref} id="techs" className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-      <h2 className="font-dm text-4xl sm:text-3xl font-bold text-zinc-50">
+    <div
+      ref={ref}
+      id="techs"
+      className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
+    >
+      <h2 className="font-montserrat text-4xl sm:text-3xl font-bold text-zinc-50">
         {t("title")}
       </h2>
       <div className="max-w-4xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 mt-8">

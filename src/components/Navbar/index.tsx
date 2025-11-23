@@ -13,24 +13,41 @@ export const Navbar = () => {
   return (
     <header className="w-full flex items-center h-20 bg-black-500 sticky -top-4 z-50 shadow-xl">
       <div className="w-full flex justify-between items-center h-16 px-4 bg-black-500 sticky top-0">
-        <img className="h-12 w-12 object-none" src="/logo.webp" alt="Logo" fetchpriority="high" />
+        <img
+          className="h-12 w-12 object-none"
+          src="/logo.webp"
+          alt="Logo"
+          fetchpriority="high"
+        />
         <nav className="hidden sm:flex gap-12">
-          <a href="#about" aria-label={`${t("nav-link-aria-label")} ${t("about")}`}>
+          <a
+            href="#about"
+            aria-label={`${t("nav-link-aria-label")} ${t("about")}`}
+          >
             <span className="font-poppins md:text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
               {t("about")}
             </span>
           </a>
-          <a href="#projects" aria-label={`${t("nav-link-aria-label")} ${t("projects")}`}>
+          <a
+            href="#projects"
+            aria-label={`${t("nav-link-aria-label")} ${t("projects")}`}
+          >
             <span className="font-poppins md:text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
               {t("projects")}
             </span>
           </a>
-          <a href="#techs" aria-label={`${t("nav-link-aria-label")} ${t("techs")}`}>
+          <a
+            href="#techs"
+            aria-label={`${t("nav-link-aria-label")} ${t("techs")}`}
+          >
             <span className="font-poppins md:text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
               {t("techs")}
             </span>
           </a>
-          <a href="#contacts" aria-label={`${t("nav-link-aria-label")} ${t("contacts")}`}>
+          <a
+            href="#contacts"
+            aria-label={`${t("nav-link-aria-label")} ${t("contacts")}`}
+          >
             <span className="font-poppins md:text-lg text-gray transition-all duration-40 hover:text-white hover:cursor-pointer">
               {t("contacts")}
             </span>
