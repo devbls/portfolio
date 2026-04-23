@@ -34,9 +34,9 @@ export const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col gap-8"
+            className="flex flex-col gap-8 items-center sm:items-start"
           >
-            <p className="font-poppins text-lg md:text-xl text-zinc-400 leading-relaxed text-justify sm:text-left">
+            <p className="font-poppins text-base md:text-xl text-zinc-400 leading-relaxed text-center sm:text-left">
               {t("description")}
             </p>
             <motion.button 
