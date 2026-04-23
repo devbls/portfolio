@@ -26,11 +26,36 @@ export default {
           "0%": { transform: "translateY(-100%)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        aura: {
+          "0%, 100%": {
+            opacity: 0.2,
+            transform: "scale(1) translate(0, 0)",
+          },
+          "33%": {
+            opacity: 0.4,
+            transform: "scale(1.2) translate(10%, 10%)",
+          },
+          "66%": {
+            opacity: 0.3,
+            transform: "scale(0.8) translate(-10%, 5%)",
+          },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
       },
       animation: {
         "slide-in-left": "slideInLeft 1.2s ease-out forwards",
         "slide-in-right": "slideInRight 1.2s ease-out forwards",
         "slide-in-top": "slideInTop 1.2s ease-out forwards",
+        "aura-slow": "aura 15s ease-in-out infinite",
+        "shimmer": "shimmer 3s linear infinite",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },

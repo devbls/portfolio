@@ -1,131 +1,170 @@
-import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { FaExternalLinkAlt } from "react-icons/fa";
-
-import { useFadeInOnScroll } from "../hooks/useFadeInOnScroll";
+import { motion } from "framer-motion";
 
 const PROJECTS = [
   {
     link: "https://seocamp.com.br/",
     name: "SEOcamp 2026",
     thumb: "seocamp.webp",
-    alt: "SEOcamp 2026 Thumbnail",
+    tags: ["React", "Vite", "Tailwind"],
   },
   {
     link: "https://www.sunbeachrental.com/",
     name: "Sunbeach Rental",
     thumb: "sunbeach.webp",
-    alt: "Sunbeach Rental Thumbnail",
+    tags: ["Next.js", "TypeScript", "CMS"],
   },
   {
     link: "https://cumulusled.com.br/",
     name: "Cumulus LED",
     thumb: "cumulus.webp",
-    alt: "Cumulus LED Thumbnail",
+    tags: ["React", "Styled Components"],
   },
   {
     link: "https://www.telhanorte.com.br/",
     name: "Telhanorte",
     thumb: "telhanorte.webp",
-    alt: "Telhanorte Thumbnail",
+    tags: ["VTEX", "React", "Sass"],
   },
   {
     link: "https://www.enviapecas.com.br/",
     name: "Envia Peças",
     thumb: "enviapecas.webp",
-    alt: "Envia Peças Thumbnail",
+    tags: ["E-commerce", "React"],
   },
   {
     link: "https://www.tumelero.com.br/",
     name: "Tumelero",
     thumb: "tumelero.webp",
-    alt: "Tumelero Thumbnail",
+    tags: ["VTEX", "React"],
   },
   {
     link: "https://www.ascona.com.br/",
     name: "Ascona",
     thumb: "ascona.webp",
-    alt: "Ascona Thumbnail",
+    tags: ["VTEX", "Frontend"],
   },
   {
     link: "https://www.intimastore.com.br/",
     name: "Intima Store",
     thumb: "intimastore.webp",
-    alt: "Intima Store Thumbnail",
+    tags: ["VTEX", "UI/UX"],
   },
   {
     link: "https://www.conscienciajeans.com.br/",
     name: "Consciência Jeans",
     thumb: "conscienciajeans.webp",
-    alt: "Consciência Jeans Thumbnail",
+    tags: ["VTEX", "React"],
   },
   {
     link: "https://espaco-nandi.vercel.app/",
     name: "Espaço Nandi",
     thumb: "espaco-nandi.webp",
-    alt: "Espaço Nandi Thumbnail",
+    tags: ["React", "Vercel"],
   },
   {
     link: "https://www.klx.pt",
     name: "KLx Website",
     thumb: "klx.webp",
-    alt: "KLX Thumbnail",
+    tags: ["Corporate", "React"],
   },
   {
     link: "https://www.primeit.pt",
     name: "PrimeIT Website",
     thumb: "primeit.webp",
-    alt: "PrimeIT Thumbnail",
+    tags: ["Corporate", "TypeScript"],
   },
   {
     link: "https://www.primenearshore.com",
     name: "Prime Nearshore Website",
     thumb: "nearshore.webp",
-    alt: "Prime Nearshore Thumbnail",
+    tags: ["International", "React"],
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const Projects = () => {
   const { t } = useTranslation("projects");
-  const ref = useRef(null);
-  const isVisible = useFadeInOnScroll(ref);
 
   return (
-    <div
-      ref={ref}
-      id="projects"
-      className={`flex flex-col items-center justify-center min-h-[120vh] pt-24 sm:pt-8 scroll-mt-20 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
-    >
-      <h2 className="font-montserrat text-4xl sm:text-3xl font-bold text-zinc-50">
-        {t("title")}
-      </h2>
-      <div className="max-w-5xl grid md:grid-cols-2 lg:grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] gap-12 lg:gap-6 mt-12 sm:mt-8">
+    <section id="projects" className="py-24 scroll-mt-20 container mx-auto px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center gap-4 mb-16"
+      >
+        <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-zinc-50">
+          {t("title")}
+        </h2>
+        <div className="h-1.5 w-20 bg-purple-500 rounded-full" />
+      </motion.div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
         {PROJECTS.map((project) => (
-          <a
+          <motion.div
             key={project.name}
-            className="w-[280px] h-[180px] md:w-[320px] md:h-[200px] group rounded-md relative overflow-hidden transition-all duration-300 border border-purple-500 sm:border-stone-700 sm:hover:border-purple-500"
-            href={project.link}
-            target="_blank"
+            variants={itemVariants}
+            whileHover={{ y: -10 }}
+            className="group relative bg-zinc-900/50 backdrop-blur-md border border-zinc-800 rounded-3xl overflow-hidden hover:border-purple-500/50 transition-colors shadow-xl"
           >
-            <div className="w-fit h-fit absolute left-0 right-0 bottom-0 top-0 m-auto z-20 transition-all duration-300 sm:opacity-0 visible sm:invisible sm:group-hover:visible sm:group-hover:opacity-100">
-              <p className="font-montserrat font-bold text-xl text-purple-500">
+            <div className="aspect-video overflow-hidden relative">
+              <img
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src={`/assets/thumbs/${project.thumb}`}
+                alt={project.name}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className="p-4 bg-purple-500 text-zinc-50 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300 delay-100"
+                >
+                  <FaExternalLinkAlt size={20} />
+                </a>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-zinc-50 font-poppins mb-3">
                 {project.name}
-              </p>
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <img
-              className="w-[280px] h-[180px] md:w-[320px] md:h-[200px] object-cover transition-all duration-300 sm:group-hover:scale-105 blur-[1px] sm:blur-0 sm:group-hover:blur-[1px]"
-              src={`/assets/thumbs/${project.thumb}`}
-              alt={project.alt}
-              loading="lazy"
-            />
-            <div className="block w-[280px] h-[180px] md:w-[320px] md:h-[200px] bg-black-400 sm:bg-[#00000070] sm:group-hover:bg-black-400 opacity-70 content-[''] sm:group-hover:block absolute top-0 left-0 z-10" />
-            <div className="visible sm:invisible group-hover:visible block absolute top-2 right-2 z-10 text-purple-500 transition-all duration-300 sm:opacity-0 sm:group-hover:opacity-100">
-              <FaExternalLinkAlt size={16} />
-            </div>
-          </a>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 };
 

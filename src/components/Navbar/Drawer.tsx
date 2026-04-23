@@ -1,6 +1,7 @@
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { IoMdClose } from "react-icons/io";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
   isOpen: boolean;
@@ -11,71 +12,72 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
   const { t, i18n } = useTranslation("tabs");
 
   return (
-    <div
-      className={
-        "fixed overflow-hidden z-10 bg-opacity-25 inset-0 transform ease-in-out " +
-        (isOpen
-          ? " transition-opacity opacity-100 duration-500 translate-x-0  "
-          : " transition-all delay-500 opacity-0 translate-x-full  ")
-      }
-    >
-      <nav
-        className={
-          "flex flex-col gap-8 items-center py-16 w-screen max-w-screen-md bg-black-500 h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform " +
-          (isOpen ? " translate-x-0 " : " translate-x-full ")
-        }
-      >
-        <a href="#about" aria-label={`${t("nav-link-aria-label")} ${t("about")}`} onClick={() => setOpen(false)}>
-          <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
-            {t("about")}
-          </span>
-        </a>
-        <a href="#projects" aria-label={`${t("nav-link-aria-label")} ${t("projects")}`} onClick={() => setOpen(false)}>
-          <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
-            {t("projects")}
-          </span>
-        </a>
-        <a href="#techs" aria-label={`${t("nav-link-aria-label")} ${t("techs")}`} onClick={() => setOpen(false)}>
-          <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
-            {t("techs")}
-          </span>
-        </a>
-        <a href="#contacts" aria-label={`${t("nav-link-aria-label")} ${t("contacts")}`} onClick={() => setOpen(false)}>
-          <span className="font-poppins text-2xl text-gray transition-all duration-40 active:text-white">
-            {t("contacts")}
-          </span>
-        </a>
-        <div className="flex items-center mt-auto">
-          <button
-            className={`h-10 w-12 text-purple-500 font-poppins ${
-              i18next.resolvedLanguage === "pt" ? "font-bold" : "font-light"
-            } transition-all duration-40 active:opacity-75 active:border rounded active:border-purple-500`}
-            onClick={() => i18n.changeLanguage("pt")}
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setOpen(false)}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110]"
+          />
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed top-0 right-0 h-screen w-full max-w-xs bg-zinc-950 border-l border-zinc-800 z-[120] p-8 flex flex-col"
           >
-            PT
-          </button>
-          <div className="h-10 w-0.5 bg-purple-500" />
-          <button
-            className={`h-10 w-12 text-purple-500 font-poppins ${
-              i18next.resolvedLanguage === "en" ? "font-bold" : "font-light"
-            } transition-all duration-40 active:opacity-75 active:border rounded active:border-purple-500`}
-            onClick={() => i18n.changeLanguage("en")}
-          >
-            EN
-          </button>
-        </div>
-      </nav>
-      <button
-        aria-label={t("drawer-close-icon-aria-label")}
-        className={`w-8 h-8 absolute top-6 right-4 transition-all duration-500 ${
-          isOpen ? "opacity-100" : "opacity-0"
-        }`}
-        onClick={() => {
-          setOpen(false);
-        }}
-      >
-        <IoMdClose className="text-purple-500" size={32} />
-      </button>
-    </div>
+            <div className="flex justify-between items-center mb-12">
+              <img src="/logo.webp" alt="Logo" className="h-8 w-8" />
+              <button
+                aria-label={t("drawer-close-icon-aria-label")}
+                onClick={() => setOpen(false)}
+                className="p-2 text-purple-500 hover:bg-purple-500/10 rounded-xl transition-colors"
+              >
+                <IoMdClose size={24} />
+              </button>
+            </div>
+            <nav className="flex flex-col gap-6">
+              {["about", "projects", "techs", "contacts"].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item}`}
+                  onClick={() => setOpen(false)}
+                  className="text-2xl font-poppins font-semibold text-zinc-400 hover:text-purple-500 transition-colors"
+                >
+                  {t(item)}
+                </a>
+              ))}
+            </nav>
+            <div className="mt-auto pt-8 border-t border-zinc-800">
+              <div className="flex items-center gap-4">
+                <button
+                  className={`px-4 py-2 rounded-xl font-poppins text-sm transition-all ${
+                    i18next.resolvedLanguage === "pt"
+                      ? "bg-purple-500 text-zinc-50 shadow-lg shadow-purple-500/20"
+                      : "text-zinc-400"
+                  }`}
+                  onClick={() => i18n.changeLanguage("pt")}
+                >
+                  Português
+                </button>
+                <button
+                  className={`px-4 py-2 rounded-xl font-poppins text-sm transition-all ${
+                    i18next.resolvedLanguage === "en"
+                      ? "bg-purple-500 text-zinc-50 shadow-lg shadow-purple-500/20"
+                      : "text-zinc-400"
+                  }`}
+                  onClick={() => i18n.changeLanguage("en")}
+                >
+                  English
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 };

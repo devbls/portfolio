@@ -9,13 +9,21 @@
     "nav-link-aria-label": "Ir para página"
   },
   "firstSection": {
-    "title": "Olá, me chamo",
-    "subtitle": "Desenvolvedor focado em soluções criativas e de alta performance."
+    "title": "DESENVOLVEDOR FRONTEND",
+    "greeting": "Olá, eu sou",
+    "subtitle": "Especialista em criar interfaces modernas, fluidas e focadas na experiência do usuário.",
+    "cta_work": "Ver Projetos",
+    "cta_contact": "Contato"
   },
   "about": {
     "title": "Sobre mim",
     "description": "Sou desenvolvedor fullstack apaixonado por criar experiências digitais que conectam pessoas e negócios. Tenho experiência prática em desenvolvimento de lojas virtuais, integrações de sistemas, automações e otimização de processos de venda online. Busco sempre soluções escaláveis, limpas e eficientes, priorizando a performance e a experiência do usuário.",
-    "cv": "Baixar currículo"
+    "cv": "Currículo PDF",
+    "stat_exp": "Experiência",
+    "stat_projects": "Projetos",
+    "stat_clients": "Clientes",
+    "skill_title": "Foco Principal",
+    "skill_desc": "Desenvolvimento Frontend escalável com React e TypeScript."
   },
   "projects": {
     "title": "Projetos"
@@ -27,6 +35,7 @@
     "title": "Contatos",
     "linkedin-link-aria-label": "Ir para LinkedIn",
     "github-link-aria-label": "Ir para Github",
-    "email-link-aria-label": "Enviar e-mail"
+    "email-link-aria-label": "Enviar e-mail",
+    "all_rights_reserved": "Todos os direitos reservados."
   }
 }

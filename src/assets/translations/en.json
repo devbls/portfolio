@@ -9,13 +9,21 @@
     "nav-link-aria-label": "Go to page"
   },
   "firstSection": {
-    "title": "Hi, I'm",
-    "subtitle": "Developer focused on creative and high-performance solutions."
+    "title": "FRONTEND DEVELOPER",
+    "greeting": "Hi, I'm",
+    "subtitle": "Specialist in creating modern, fluid interfaces focused on user experience.",
+    "cta_work": "View Projects",
+    "cta_contact": "Contact"
   },
   "about": {
     "title": "About me",
     "description": "I'm a fullstack developer passionate about creating digital experiences that connect people and businesses. I have hands-on experience developing online stores, system integrations, automation, and optimizing online sales processes. I always strive for scalable, clean, and efficient solutions, prioritizing performance and user experience.",
-    "cv": "Download CV"
+    "cv": "Resume PDF",
+    "stat_exp": "Experience",
+    "stat_projects": "Projects",
+    "stat_clients": "Clients",
+    "skill_title": "Main Focus",
+    "skill_desc": "Scalable Frontend development with React and TypeScript."
   },
   "projects": {
     "title": "Projects"
@@ -27,6 +35,7 @@
     "title": "Contacts",
     "linkedin-link-aria-label": "Go to LinkedIn",
     "github-link-aria-label": "Go to Github",
-    "email-link-aria-label": "Send e-mail"
+    "email-link-aria-label": "Send e-mail",
+    "all_rights_reserved": "All rights reserved."
   }
 }

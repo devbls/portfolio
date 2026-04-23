@@ -1,29 +1,86 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export const FirstSection = () => {
   const { t } = useTranslation("firstSection");
 
   return (
-    <div className="min-h-[375px] h-[calc(100vh-5rem)]">
-      <div className="h-full flex items-center justify-center sm:justify-between sm:px-12 md:px-16 lg:px-20 gap-2 md:gap-4">
-        <div className="animate-slide-in-top sm:animate-slide-in-left flex flex-col gap-2">
-          <p className="font-poppins text-center sm:text-left text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-zinc-50">
+    <section className="min-h-[375px] h-[calc(100vh-5rem)] flex items-center justify-center relative overflow-hidden">
+      <div className="container mx-auto px-6 h-full flex flex-col sm:flex-row items-center justify-between gap-12">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col gap-4 text-center sm:text-left z-10"
+        >
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="font-poppins text-zinc-400 text-lg md:text-xl uppercase tracking-widest"
+          >
             {t("title")}
-          </p>
-          <span className="font-poppins text-center sm:text-left text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-purple-500 animate-fade-in">
-            Brenno Santos
-          </span>
-          <p className="w-[90vw] max-w-[375px] sm:max-w-[320px] md:w-full md:max-w-[415px] font-poppins text-center sm:text-left text-lg sm:text-base md:text-lg lg:text-xl text-zinc-400 animate-fade-in">
+          </motion.p>
+          <h1 className="font-poppins text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-zinc-50 leading-tight">
+            <span className="block">{t("greeting")}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-400 animate-shimmer bg-[length:200%_auto]">
+              Brenno Santos
+            </span>
+          </h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="max-w-[500px] font-poppins text-lg md:text-xl text-zinc-400 leading-relaxed"
+          >
             {t("subtitle")}
-          </p>
-        </div>
-        <img
-          className="hidden sm:block sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-96 lg:w-96 animate-slide-in-right"
-          src="/big-logo.webp"
-          alt="Big Logo"
-          fetchpriority="high"
-        />
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="flex flex-wrap gap-4 mt-4 justify-center sm:justify-start"
+          >
+            <a 
+              href="#projects" 
+              className="px-8 py-3 bg-purple-500 hover:bg-purple-600 text-zinc-50 font-poppins font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(152,109,255,0.3)]"
+            >
+              {t("cta_work")}
+            </a>
+            <a 
+              href="#contacts" 
+              className="px-8 py-3 border border-purple-500/30 hover:border-purple-500 text-zinc-50 font-poppins font-semibold rounded-full transition-all duration-300 backdrop-blur-sm"
+            >
+              {t("cta_contact")}
+            </a>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative group hidden sm:block"
+        >
+          <div className="absolute inset-0 bg-purple-500/20 blur-[80px] rounded-full group-hover:bg-purple-500/30 transition-all duration-500" />
+          <motion.img
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="relative h-64 w-64 md:h-80 md:w-80 lg:h-[450px] lg:w-[450px] object-contain"
+            src="/big-logo.webp"
+            alt="Brenno Santos Logo"
+            fetchpriority="high"
+          />
+        </motion.div>
       </div>
-    </div>
+      <motion.div 
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
+      >
+        <div className="w-6 h-10 border-2 border-zinc-500 rounded-full flex justify-center pt-2">
+          <div className="w-1 h-2 bg-purple-500 rounded-full" />
+        </div>
+      </motion.div>
+    </section>
   );
 };
