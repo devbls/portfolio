@@ -4,8 +4,6 @@ Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi construíd
 
 ---
 
-## 🎨 Visualização
-
 <div align="center">
   <img src="./public/big-logo.webp" alt="Brenno Santos Logo" width="200" />
   <p><em>"Especialista em criar interfaces modernas e fluidas, focadas na experiência do usuário."</em></p>
@@ -48,43 +46,6 @@ src/
 ├── index.css           # Estilos globais e configuração do Tailwind
 └── main.tsx            # Ponto de entrada da aplicação
 ```
-
----
-
-## 🚀 Como Começar
-
-Para rodar este projeto localmente, siga estes passos:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/devbls/portfolio.git
-   ```
-
-2. **Navegue até o diretório do projeto:**
-   ```bash
-   cd portfolio
-   ```
-
-3. **Instale as dependências:**
-   ```bash
-   yarn install
-   # ou
-   npm install
-   ```
-
-4. **Inicie o servidor de desenvolvimento:**
-   ```bash
-   yarn dev
-   # ou
-   npm run dev
-   ```
-
-5. **Build para produção:**
-   ```bash
-   yarn build
-   # ou
-   npm run build
-   ```
 
 ---
 
