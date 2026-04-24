@@ -5,7 +5,9 @@ Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi construíd
 ---
 
 <div align="center">
-  <img src="./public/big-logo.webp" alt="Brenno Santos Logo" width="200" />
+  <a href="https://brennosantos.vercel.app">
+    <img src="./public/big-logo.webp" alt="Brenno Santos Logo" width="200" />
+  </a>
   <p><em>"Especialista em criar interfaces modernas e fluidas, focadas na experiência do usuário."</em></p>
 </div>
 
@@ -53,6 +55,7 @@ src/
 
 Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades.
 
+- **Website:** [brennosantos.vercel.app](https://brennosantos.vercel.app)
 - **LinkedIn:** [linkedin.com/in/brenno-santos-57399b334](https://www.linkedin.com/in/brenno-santos-57399b334/)
 - **Email:** [devblsds@gmail.com](mailto:devblsds@gmail.com)
 - **Github:** [@devbls](https://github.com/devbls)
