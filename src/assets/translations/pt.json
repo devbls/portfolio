@@ -6,7 +6,8 @@
     "contacts": "Contatos",
     "drawer-icon-aria-label": "Abrir menu de navegação",
     "drawer-close-icon-aria-label": "Fechar menu de navegação",
-    "nav-link-aria-label": "Ir para página"
+    "nav-link-aria-label": "Ir para página",
+    "whatsapp": "WhatsApp"
   },
   "firstSection": {
     "title": "DESENVOLVEDOR FULLSTACK",
@@ -36,6 +37,7 @@
     "linkedin-link-aria-label": "Ir para LinkedIn",
     "github-link-aria-label": "Ir para Github",
     "email-link-aria-label": "Enviar e-mail",
+    "whatsapp-link-aria-label": "Contato via WhatsApp",
     "all_rights_reserved": "Todos os direitos reservados."
   }
 }

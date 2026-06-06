@@ -1,4 +1,4 @@
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -7,6 +7,12 @@ const Contacts = () => {
   const { t } = useTranslation("contacts");
 
   const socialLinks = [
+    {
+      href: "https://wa.me/5500000000000",
+      icon: <FaWhatsapp size={24} />,
+      label: "WhatsApp",
+      aria: t("whatsapp-link-aria-label")
+    },
     {
       href: "https://www.linkedin.com/in/brenno-santos-57399b334/",
       icon: <FaLinkedinIn size={24} />,

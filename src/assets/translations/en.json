@@ -6,7 +6,8 @@
     "contacts": "Contacts",
     "drawer-icon-aria-label": "Open navigation menu",
     "drawer-close-icon-aria-label": "Close navigation menu",
-    "nav-link-aria-label": "Go to page"
+    "nav-link-aria-label": "Go to page",
+    "whatsapp": "WhatsApp"
   },
   "firstSection": {
     "title": "FULLSTACK DEVELOPER",
@@ -36,6 +37,7 @@
     "linkedin-link-aria-label": "Go to LinkedIn",
     "github-link-aria-label": "Go to Github",
     "email-link-aria-label": "Send e-mail",
+    "whatsapp-link-aria-label": "Contact via WhatsApp",
     "all_rights_reserved": "All rights reserved."
   }
 }

@@ -2,6 +2,7 @@ import i18next from "i18next";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { IoMenuOutline } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import { Drawer } from "./Drawer";
@@ -10,7 +11,7 @@ export const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const { t, i18n } = useTranslation("tabs");
+  const { t, i18n } = useTranslation(["tabs", "contacts"]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,16 +43,26 @@ export const Navbar = () => {
               key={item}
               href={`#${item}`}
               className="relative group"
-              aria-label={`${t("nav-link-aria-label")} ${t(item)}`}
+              aria-label={`${t("nav-link-aria-label", { ns: "tabs" })} ${t(item, { ns: "tabs" })}`}
             >
               <span className="font-poppins text-sm font-medium text-zinc-400 group-hover:text-zinc-50 transition-colors">
-                {t(item)}
+                {t(item, { ns: "tabs" })}
               </span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
         <div className="flex items-center gap-6">
+          <a
+            href="https://wa.me/5521981622150"
+            target="_blank"
+            rel="noopener noreferrer"
+            title={t("whatsapp", { ns: "tabs" })}
+            aria-label={t("whatsapp-link-aria-label", { ns: "contacts" })}
+            className="text-zinc-400 hover:text-green-500 transition-colors"
+          >
+            <FaWhatsapp size={24} />
+          </a>
           <div className="hidden sm:flex items-center bg-zinc-800/50 rounded-full p-1 border border-zinc-700/50">
             <button
               className={`px-4 py-1.5 rounded-full text-xs font-poppins transition-all ${
@@ -75,7 +86,7 @@ export const Navbar = () => {
             </button>
           </div>
           <button
-            aria-label={t("drawer-icon-aria-label")}
+            aria-label={t("drawer-icon-aria-label", { ns: "tabs" })}
             className="md:hidden p-2 text-purple-500 hover:bg-purple-500/10 rounded-xl transition-colors"
             onClick={() => setDrawerOpen((prevState) => !prevState)}
           >

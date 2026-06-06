@@ -1,6 +1,7 @@
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { IoMdClose } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 };
 
 export const Drawer = ({ isOpen, setOpen }: Props) => {
-  const { t, i18n } = useTranslation("tabs");
+  const { t, i18n } = useTranslation(["tabs", "contacts"]);
 
   return (
     <AnimatePresence>
@@ -32,7 +33,7 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
             <div className="flex justify-between items-center mb-12">
               <img src="/logo.webp" alt="Logo" className="h-8 w-8" />
               <button
-                aria-label={t("drawer-close-icon-aria-label")}
+                aria-label={t("drawer-close-icon-aria-label", { ns: "tabs" })}
                 onClick={() => setOpen(false)}
                 className="p-2 text-purple-500 hover:bg-purple-500/10 rounded-xl transition-colors"
               >
@@ -47,9 +48,18 @@ export const Drawer = ({ isOpen, setOpen }: Props) => {
                   onClick={() => setOpen(false)}
                   className="text-2xl font-poppins font-semibold text-zinc-400 hover:text-purple-500 transition-colors"
                 >
-                  {t(item)}
+                  {t(item, { ns: "tabs" })}
                 </a>
               ))}
+              <a
+                href="https://wa.me/5521981622150"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-2xl font-poppins font-semibold text-zinc-400 hover:text-green-500 transition-colors"
+              >
+                <FaWhatsapp />
+                <span>WhatsApp</span>
+              </a>
             </nav>
             <div className="mt-auto pt-8 border-t border-zinc-800">
               <div className="flex items-center gap-4">
